@@ -4,10 +4,14 @@ abstract class TimeFormatter {
     final minutesRaw = (secondsRaw / 60).truncate();
     final hourRaw = (minutesRaw / 60).truncate();
 
-    final sseconds = (secondsRaw % 60).toString().padLeft(2, '0');
-    final sMinutes = (minutesRaw % 60).toString().padLeft(2, '0');
-    final hour = (hourRaw % 60).toString().padLeft(2, '0');
+    final sseconds = formatWithZeros(secondsRaw);
+    final sMinutes = formatWithZeros(minutesRaw);
+    final hour = formatWithZeros(hourRaw);
 
     return '$hour:$sMinutes:$sseconds';
+  }
+
+  static String formatWithZeros(int infoRaw) {
+    return (infoRaw % 60).toString().padLeft(2, '0');
   }
 }

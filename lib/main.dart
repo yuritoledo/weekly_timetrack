@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:weekly_timetrack/pages/home.dart';
+import 'package:weekly_timetrack/pages/list.dart';
 
-void main () {
+void main() {
   runApp(App());
 }
 
@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Weekly time tracking',
-      home: Home(),
+      home: TracksList(),
     );
   }
 }

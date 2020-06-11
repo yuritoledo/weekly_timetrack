@@ -27,8 +27,14 @@ class _TimerTextState extends State<TimerText> {
   @override
   Widget build(BuildContext context) {
     final sec = TimeFormatter.format(stopwatch.elapsedMilliseconds);
-    return Container(
-      child: Text(sec),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          sec,
+          style: TextStyle(fontSize: 75),
+        ),
+      ],
     );
   }
 }
